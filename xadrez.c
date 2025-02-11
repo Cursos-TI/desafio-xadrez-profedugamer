@@ -7,15 +7,57 @@
 int main() {
     // Nível Novato - Movimentação das Peças
     // Sugestão: Declare variáveis constantes para representar o número de casas que cada peça pode se mover.
+    int opcoes, direita, esquerda, superiorDireita;
 
-    // Implementação de Movimentação do Bispo
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação do Bispo em diagonal.
+    //Título do jogo de Xadrez
+    printf("### JOGO DE XADREZ ###\n\n");
+    printf("Bem vindo ao jogo de xadrez, escolha uma das\nopções do menu abaixo para movimentar suas peças.\n");
 
-    // Implementação de Movimentação da Torre
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Torre para a direita.
+    do{
+        // Inicia o menu do jogo de xadrez
+        printf("\nMenu:\n");
+        printf("1. Bispo \n");
+        printf("2. Torre \n");
+        printf("3. Rainha \n");
+        printf("4. Sair do jogo.\n");
+        printf("Escolha uma opção: ");
+        scanf("%d", &opcoes);
 
-    // Implementação de Movimentação da Rainha
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Rainha para a esquerda.
+        switch(opcoes){
+            
+            // Implementação de Movimentação do Bispo
+            // Sugestão: Utilize uma estrutura de repetição para simular a movimentação do Bispo em diagonal (5 casas superior direita).          
+            case 1:
+                for (superiorDireita = 1; superiorDireita <= 5; superiorDireita++) {
+                    printf("Você movimentou o bispo para a Superior Direita %d casa(s)\n", superiorDireita);
+                }
+                break;
+
+            // Implementação de Movimentação da Torre
+            // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Torre para a direita (5 casas).
+            case 2:
+                for (direita = 1; direita <= 5; direita++) {
+                    printf("Você movimentou a torre para a direita %d casa(s)\n", direita);
+                }
+                break;
+
+            // Implementação de Movimentação da Rainha
+            // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Rainha para a esquerda (8 casas).
+            case 3:
+                for (esquerda = 1; esquerda <= 8; esquerda++){
+                    printf("Você movimentou a rainha para a esquerda %d casa(s)\n", esquerda);
+                }
+                break;
+            
+            default:
+                printf("\n");
+                break;
+        }
+
+    } while (opcoes != 4);
+
+        printf("Que pena! Você saiu do jogo...\n\n");
+
 
     // Nível Aventureiro - Movimentação do Cavalo
     // Sugestão: Utilize loops aninhados para simular a movimentação do Cavalo em L.
